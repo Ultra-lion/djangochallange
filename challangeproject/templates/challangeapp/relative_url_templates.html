@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>This is relative_url_template </title>
+   <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+ </head>
+ <body>
+   <h1>this is relative_url_template body</h1>
+   <a href="{% url 'challangeapp:other' %}">The Other Page</a>
+   <a href="{% url 'admin:index' %}">Link to admin page</a>
+   </body>
+</html>

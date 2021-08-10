@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ {% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>This is test index title</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+  </head>
+  <body>
+    <h1>this is challange app 1 body</h1>
+    <h2>Here are your users </h2>
+    <div class="djangotwo">
+      {% if user_records %}
+      <table>
+        <th>User Name</th>
+        <th>User Age</th>
+
+        {%for us in user_records%}
+        <tr>
+          <td>{{us.name}}</td>
+          <td>{{us.age}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {%else %}
+        <p>No Access Records Found</p>
+      {%endif%}
+
+    </div>
+  </body>
+</html>
